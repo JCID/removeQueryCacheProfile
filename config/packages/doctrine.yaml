@@ -1,0 +1,26 @@
+doctrine:
+    dbal:
+        driver: "pdo_mysql"
+        host: "localhost"
+        port: "3306"
+        dbname: "%env(DB_DBNAME)%"
+        user: "%env(DB_USERNAME)%"
+        password: "%env(DB_PASSWORD)%"
+        server_version: "%env(DB_VERSION)%"
+        charset: UTF8
+    orm:
+        auto_generate_proxy_classes: false
+        entity_managers:
+            default:
+                mappings:
+                    App:
+                        is_bundle: false
+                        type: annotation
+                        dir: '%kernel.project_dir%/src/Entity'
+                        prefix: 'App\Entity'
+                query_cache_driver:
+                    type: pool
+                    pool: doctrine.system_cache_pool
+                result_cache_driver:
+                    type: pool
+                    pool: doctrine.result_cache_pool
