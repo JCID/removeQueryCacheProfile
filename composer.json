@@ -4,7 +4,6 @@
     "license": "proprietary",
     "type": "project",
     "require": {
-        "php": "^7.4.33",
         "doctrine/dbal": "^2.13.9",
         "doctrine/doctrine-bundle": "^2.7.2",
         "doctrine/orm": "^2.16.2",
